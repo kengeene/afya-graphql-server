@@ -148,22 +148,36 @@ export const visits = [
 
 export const keyIssues = [
   {
-    "id": "1",
-    "type": "Equipment Failure",
-    "location": "1",
-    "count": 5
+    type: "Equipment Failure",
+    location: "1",
+    count: 5,
   },
   {
-    "id": "2",
-    "type": "Staff Shortage",
-    "location": "1",
-    "count": 3
+    type: "Staff Shortage",
+    location: "1",
+    count: 3,
   },
   {
-    "id": "3",
-    "type": "Long Wait Time",
-    "location": "2",
-    "count": 4
-  }
-]
+    type: "Long Wait Time",
+    location: "2",
+    count: 4,
+  },
+  {
+    type: "Patient Satisfaction",
+    location: "2",
+    count: 4,
+  },
+  ,
+  {
+    type: "Late check-in",
+    location: "2",
+    count: 4,
+  },
+  ,
+  {
+    type: "Delay in lab",
+    location: "2",
+    count: 4,
+  },
+];
 
