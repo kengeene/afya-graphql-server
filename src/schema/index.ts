@@ -5,16 +5,66 @@
 export const typeDefs = `#graphql
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
-  # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
+  # This "AnalyticMetric" type defines the queryable fields for every analytic metric in our data source.
+  type AnalyticMetric {
+    id: ID!
+    name: String!
+    value: Float!
+    trend: Float!
+    unit: String
+  }
+
+  type footfallMetric {
+    id: ID!
+    count: Int!
+    trend: Float!
+    startDate: String!
+    endDate: String!
+    location: String!
+  }
+
+  type Location {
+    id: ID!
+    name: String!
+    visits: Int!
+    keyIssues: [String!]!
+    npsData: [String!]!
+  }
+
+  type npsMetric {
+    id: ID!
+    location: String!
+    staffName: String!
+    efficiencyDelta: Float!
+    npsDelta: Float!
+    efficiency: Float!
+    reportedIssues: Int!
+    npsScore: Int!
+  }
+
+  type visit {
+    id: ID!
+    location: String!
+    count: Int!
+    date: String!
+  }
+
+  type keyIssue {
+    id: ID!
+    type: String!
+    location: String!
+    count: Int!
   }
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
-    books: [Book]
+    analyticMetrics: [AnalyticMetric!]!
+    footfallMetrics: [footfallMetric!]!
+    locations: [Location!]!
+    npsMetrics: [npsMetric!]!
+    visits: [visit!]!
+    keyIssues: [keyIssue!]!
   }
 `;
