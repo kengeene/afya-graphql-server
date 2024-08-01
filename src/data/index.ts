@@ -1,26 +1,44 @@
 export const analyticMetrics = [
   {
-    "id": "1",
-    "name": "Footfall",
-    "value": 2000,
-    "trend": 0.05,
-    "unit": "patients"
+    id: "1",
+    name: "Footfall",
+    data: [
+      { month: "January", value: 186 },
+      { month: "February", value: 21 },
+      { month: "March", value: 237 },
+      { month: "April", value: 34 },
+      { month: "May", value: 632 },
+      { month: "June", value: 400 },
+    ],
+    unit: "patients",
   },
   {
-    "id": "2",
-    "name": "Patient Satisfaction",
-    "value": 85,
-    "trend": 0.02,
-    "unit": "%"
+    id: "2",
+    name: "Patient Satisfaction",
+    data: [
+      { month: "January", value: 324 },
+      { month: "February", value: 12 },
+      { month: "March", value: 123 },
+      { month: "April", value: 73 },
+      { month: "May", value: 64 },
+      { month: "June", value: 312 },
+    ],
+    unit: "%",
   },
   {
-    "id": "3",
-    "name": "Revenue",
-    "value": 150000,
-    "trend": 0.1,
-    "unit": "USD"
-  }
-]
+    id: "3",
+    name: "Revenue",
+    data: [
+      { month: "January", value: 186 },
+      { month: "February", value: 305 },
+      { month: "March", value: 237 },
+      { month: "April", value: 73 },
+      { month: "May", value: 30 },
+      { month: "June", value: 30 },
+    ],
+    unit: "USD",
+  },
+];
 
 export const footfallMetrics = [
   {

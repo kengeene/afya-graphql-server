@@ -1,6 +1,5 @@
 import {
   analyticMetrics,
-  footfallMetrics,
   locations,
   npsMetrics,
   visits,
@@ -13,7 +12,6 @@ import { assignId } from '../utils/array';
 export const resolvers = {
   Query: {
     analyticMetrics: () => analyticMetrics,
-    footfallMetrics: () => footfallMetrics,
     locations: () => locations,
     npsMetrics: () => npsMetrics,
     visits: () => visits,
@@ -22,7 +20,7 @@ export const resolvers = {
         const location = locations.find((loc) => loc.id === issue.location);
         return {
           ...issue,
-          location: location ? location.name : 'unknown',
+          location: location ? location.name : "unknown",
         };
       }),
   },

@@ -9,18 +9,13 @@ export const typeDefs = `#graphql
   type AnalyticMetric {
     id: ID!
     name: String!
-    value: Float!
-    trend: Float!
+    data: [AnalyticMetricData!]!
     unit: String
   }
 
-  type footfallMetric {
-    id: ID!
-    count: Int!
-    trend: Float!
-    startDate: String!
-    endDate: String!
-    location: String!
+  type AnalyticMetricData {
+    month: String!
+    value: Int!
   }
 
   type Location {
@@ -61,7 +56,6 @@ export const typeDefs = `#graphql
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
     analyticMetrics: [AnalyticMetric!]!
-    footfallMetrics: [footfallMetric!]!
     locations: [Location!]!
     npsMetrics: [npsMetric!]!
     visits: [visit!]!
