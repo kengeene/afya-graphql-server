@@ -1,11 +1,11 @@
 {
   "name": "afya-graphql-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node --experimental-specifier-resolution=node ./dist/index.js"
+    "build": "tsc",
+    "start": "npm run build && node --experimental-specifier-resolution=node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
